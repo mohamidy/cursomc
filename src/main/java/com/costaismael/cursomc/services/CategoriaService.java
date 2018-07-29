@@ -1,5 +1,7 @@
 package com.costaismael.cursomc.services;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Service;
@@ -24,6 +26,12 @@ public class CategoriaService {
 		}		
 		return obj;
 	}
+	
+	public List<Categoria> findAll() {
+		return repo.findAll();
+	}
+	
+	
 	
 	public Categoria insert(Categoria obj) {
 		obj.setId(null);
